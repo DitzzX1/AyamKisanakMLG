@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+/* NAVBAR ACTIVE */
+.nav-link.active {
+  border-bottom: 3px solid #e53935;
+}
+
+/* STATUS BUKA */
+.open-status {
+  display: inline-block;
+  margin: 12px 0 16px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.open {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.closed {
+  background: #fdecea;
+  color: #c62828;
+}
+
+/* MENU CLICK */
+.menu-list li {
+  cursor: pointer;
+}
+
+
+/*  CONTAINER  */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+/*  NAVBAR  */
+.navbar {
+  background: #f7c600;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+/*  BUTTON  */
+.btn-primary {
+  background: #e53935;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-secondary {
+  border: 2px solid #000;
+  padding: 10px 18px;
+  border-radius: 24px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/*  HERO  */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  background: url("img/ayam-bg.png") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 🔒 KUNCI KE KIRI */
+  padding-bottom: 140px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(247, 198, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 520px;
+  text-align: left; /* 🔒 PAKSA KIRI */
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  margin-bottom: 16px;
+}
+
+.hero-list {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.hero-list li {
+  margin-bottom: 6px;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start; /* 🔒 */
+}
+
+/*  MENU  */
+.menu-section {
+  background: linear-gradient(
+    to bottom,
+    #fff7cc 0%,
+    #f9f9f9 120px
+  );
+  padding: 80px 0;
+}
+
+.menu-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.menu-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 640px;
+  margin: auto;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dashed #ddd;
+  transition: 0.2s ease;
+}
+
+.menu-list li:hover {
+  padding-left: 6px;
+}
+
+.menu-name {
+  font-weight: 600;
+}
+
+.menu-price {
+  background: #ffeaea;
+  color: #e53935;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.menu-note {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.menu-actions {
+  margin-top: 24px;
+}
+
+/*  FLOATING WHATSAPP  */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.wa-float img {
+  width: 90px;
+}
+
+/*  ANIMATION  */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero {
+    padding: 100px 0 160px;
+    justify-content: flex-start; /* 🔒 TETAP KIRI */
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: left; /* 🔒 */
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-btn {
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 🔒 */
+  }
+
+  .menu-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+   .promo-box {
+    padding: 32px 20px;
+  }
+
+  .promo-box h2 {
+    font-size: 26px;
+  }
+}
+
+/*  PROMO  */
+.promo-section {
+  background: #f7c600;
+  padding: 80px 0;
+}
+
+.promo-box {
+  background: #fff;
+  border-radius: 24px;
+  padding: 48px 32px;
+  max-width: 640px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+}
+
+.promo-box h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.promo-desc {
+  font-size: 16px;
+  margin-bottom: 28px;
+  color: #333;
+}
+
+/*  FOOTER  */
+.footer {
+  background: #fff;
+  padding: 16px 0;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.footer p {
+  font-size: 13px;
+  color: #000;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
